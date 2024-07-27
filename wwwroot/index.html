@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa Forms - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="home-container">
+        <img src="../assets/logo.png" alt="Nexa Forms Logo" class="logo">
+        <h1>Nexa Forms</h1>
+        <button id="createFormButton">Create Form</button>
+    </div>
+
+    <script>
+        document.getElementById('createFormButton').addEventListener('click', function() {
+            window.location.href = 'formBuilder.html'; // Redirect to the form builder page
+        });
+    </script>
+</body>
+</html>

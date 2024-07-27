@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    overflow-y: auto; /* Allow scrolling if needed */
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.draggable {
+    background-color: #0056b3;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.draggable:hover {
+    background-color: #004494;
+}
+
+/* Form Canvas Styles */
+.form-canvas {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    display: flex; /* Use flexbox for vertical layout */
+    flex-direction: column; /* Set the direction to column */
+    overflow-y: auto; /* Allow scrolling for the form elements */
+}
+
+/* Form Element Container Styles */
+.form-element-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Space between elements */
+}
+
+/* Form Element Styles */
+.form-element {
+    margin-right: 10px; /* Space between the element and the buttons */
+    flex-grow: 1; /* Allow the input to take available space */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BBF7A9; /* Set the background color for form elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 3D effect */
+    transition: box-shadow 0.3s ease;
+}
+
+.form-element:focus {
+    outline: none;
+    box-shadow: 0 6px 8px rgba(0, 128, 0, 0.5); /* Shadow on focus */
+}
+
+/* Button Container Styles */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: auto; /* Push buttons to the bottom of the container */
+}
+
+/* Icon Button Styles */
+.icon-button {
+    background: #BBF7A9; /* Match the background color of the form elements */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 20px; /* Adjust size as needed */
+    margin-left: 10px; /* Space between the element and the button */
+    color: #333; /* Darker color for better contrast */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    padding: 5px; /* Padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Initial shadow for 3D effect */
+}
+
+.icon-button:hover {
+    background-color: #A3D6A9; /* Lighter shade on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Specific styles for edit and delete icons */
+.icon-button.edit {
+    color: #007bff; /* Blue color for edit icon */
+}
+
+.icon-button.delete {
+    color: #dc3545; /* Red color for delete icon */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Home Page Styles */
+.home-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100vh !important;
+    text-align: center !important;
+    background-color: #f4f4f4 !important;
+}
+
+.home-container .logo {
+    width: 200px !important;
+    margin-bottom: 20px !important;
+}
+
+.home-container h1 {
+    font-size: 36px !important;
+    margin-bottom: 20px !important;
+}
+
+.home-container button {
+    padding: 10px 20px !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    background-color: #007bff !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.home-container button:hover {
+    background-color: #0056b3 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+}
