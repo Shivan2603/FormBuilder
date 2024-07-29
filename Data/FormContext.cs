@@ -1,9 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using FormBuilderApp.Models;
 
-public class FormContext : DbContext
+namespace FormBuilderApp.Data
 {
-    public FormContext(DbContextOptions<FormContext> options) : base(options) { }
+    public class FormContext : DbContext
+    {
+        public FormContext(DbContextOptions<FormContext> options) : base(options) { }
 
-    public DbSet<FormModel> Forms { get; set; }
-    public DbSet<SubmittedForm> SubmittedForms { get; set; } // New DbSet for submitted forms
+        public DbSet<SubmittedForm> SubmittedForms { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<SubmittedForm>()
+                .Property(f => f.SubmissionDate)
+                .HasDefaultValueSql("getdate()"); // Set default value to current time
+        }
+    }
 }

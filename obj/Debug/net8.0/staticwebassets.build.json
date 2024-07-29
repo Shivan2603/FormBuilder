@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F6JQ19ZFiK8Cnv0+tzg0yuX1yrn198bIToNWrOBfjpE=",
+  "Hash": "f9lZGehlUUwWBSkvW8Besp+7yL/0DXxfafKjO8orfPc=",
   "Source": "FormBuilder",
   "BasePath": "_content/FormBuilder",
   "Mode": "Default",
@@ -36,6 +36,25 @@
       "OriginalItemSpec": "wwwroot\\formBuilder.html"
     },
     {
+      "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formView.html",
+      "SourceId": "FormBuilder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\",
+      "BasePath": "_content/FormBuilder",
+      "RelativePath": "formView.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\formView.html"
+    },
+    {
       "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\index.html",
       "SourceId": "FormBuilder",
       "SourceType": "Discovered",
@@ -53,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
+      "SourceId": "FormBuilder",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\",
+      "BasePath": "_content/FormBuilder",
+      "RelativePath": "savedForms.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\savedForms.html"
     },
     {
       "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\script.js",

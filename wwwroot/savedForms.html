@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saved Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="fetchAndDisplayForms()">
+    <h2>Saved Forms</h2>
+    <div id="formList"></div>
+
+    <script>
+        async function fetchAndDisplayForms() {
+            const response = await fetch('/api/form');
+            if (!response.ok) {
+                console.error('Failed to fetch forms:', response.status);
+                return;
+            }
+
+            const forms = await response.json();
+            const formList = document.getElementById('formList');
+
+            forms.forEach(form => {
+                const link = document.createElement('a');
+                link.href = 'javascript:void(0);';
+                link.textContent = form.title;
+                link.onclick = () => viewForm(form.id);
+                formList.appendChild(link);
+            });
+        }
+
+        async function viewForm(id) {
+            const pdfResponse = await fetch(`/api/form/${id}/pdf`);
+            if (!pdfResponse.ok) {
+                console.error('Failed to fetch form PDF:', pdfResponse.status);
+                return;
+            }
+
+            const pdfBlob = await pdfResponse.blob();
+            const pdfUrl = URL.createObjectURL(pdfBlob);
+
+            window.open(pdfUrl); // This will open the PDF in a new tab
+        }
+    </script>
+</body>
+</html>

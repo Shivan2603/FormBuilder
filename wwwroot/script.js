@@ -1,9 +1,9 @@
-document.querySelectorAll('.draggable').forEach(item => {
+﻿document.querySelectorAll('.draggable').forEach(item => {
     item.addEventListener('dragstart', dragStart);
 });
 
 const formCanvas = document.getElementById('formCanvas');
-let editingElement = null; // To track the currently edited element
+let editingElement = null;
 
 formCanvas.addEventListener('dragover', dragOver);
 formCanvas.addEventListener('drop', drop);
@@ -13,25 +13,26 @@ function dragStart(e) {
 }
 
 function dragOver(e) {
-    e.preventDefault(); // Prevent default to allow drop
+    e.preventDefault(); 
 }
 
 function drop(e) {
     e.preventDefault();
     const type = e.dataTransfer.getData('text/plain');
-    
+
     if (type === 'checkbox' || type === 'radio') {
         const groupName = prompt("Enter group name for checkboxes/radio buttons:", "Group Name");
-        if (!groupName) return; // Exit if no group name is provided
+        if (!groupName) return; 
         addMultipleElements(type, groupName);
     } else if (type === 'select') {
         const groupName = prompt("Enter group name for the dropdown:", "Dropdown Name");
-        if (!groupName) return; // Exit if no group name is provided
+        if (!groupName) return; 
         addDropdown(groupName);
     } else {
         const labelText = prompt("Enter label for the element:", "Label");
+        if (!labelText) return;
         const container = document.createElement('div');
-        container.classList.add('form-element-container'); // Create a container for the element
+        container.classList.add('form-element-container');
 
         const label = document.createElement('label');
         label.textContent = labelText;
@@ -40,86 +41,16 @@ function drop(e) {
         container.appendChild(label);
         container.appendChild(element);
 
-        // Associate the label with the element
         label.setAttribute('for', element.id);
-        addEditAndDeleteButtons(container, label, element); // Add edit and delete buttons for labels
+        addEditAndDeleteButtons(container, label, element);
 
-        formCanvas.appendChild(container); // Append the container to the form canvas
-    }
-}
-
-function addMultipleElements(type, groupName) {
-    const groupContainer = document.createElement('div');
-    groupContainer.classList.add('group-container'); // Create a container for the group
-
-    // Create a header for the group
-    const groupHeader = document.createElement('h3');
-    groupHeader.textContent = groupName;
-
-    // Create a button container for edit and delete buttons
-    const buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('button-container');
-
-    // Edit Button for Group
-    const editGroupButton = document.createElement('button');
-    editGroupButton.textContent = '✏️'; // Edit icon
-    editGroupButton.classList.add('icon-button', 'edit'); // Add specific class for edit
-
-    editGroupButton.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent the label click event
-        const newGroupName = prompt("Edit group name:", groupHeader.textContent);
-        if (newGroupName !== null) {
-            groupHeader.textContent = newGroupName; // Update group header
-        }
-    });
-
-    // Delete Button for Group
-    const deleteGroupButton = document.createElement('button');
-    deleteGroupButton.textContent = '🗑️'; // Delete icon
-    deleteGroupButton.classList.add('icon-button', 'delete'); // Add specific class for delete
-
-    deleteGroupButton.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent the label click event
-        groupContainer.remove(); // Remove the entire group container
-    });
-
-    // Append buttons to the button container
-    buttonContainer.appendChild(editGroupButton);
-    buttonContainer.appendChild(deleteGroupButton);
-
-    // Append group header and button container to the group container
-    groupContainer.appendChild(groupHeader);
-    groupContainer.appendChild(buttonContainer);
-
-    // Append the group container to the form canvas
-    formCanvas.appendChild(groupContainer);
-
-    let count = parseInt(prompt("How many elements do you want to add?", "1"), 10);
-    if (isNaN(count) || count < 1) return; // Exit if invalid count is provided
-
-    for (let i = 0; i < count; i++) {
-        const container = document.createElement('div');
-        container.classList.add('form-element-container'); // Create a container for the element
-
-        const label = document.createElement('label');
-        label.textContent = `${groupName} ${i + 1}`; // Label for individual checkbox/radio
-
-        const element = addElementToForm(type);
-        element.name = groupName; // Set the group name for radio buttons
-        container.appendChild(label);
-        container.appendChild(element);
-
-        // Associate the label with the element
-        label.setAttribute('for', element.id);
-        addEditAndDeleteButtons(container, label, element); // Add edit and delete buttons for labels
-
-        groupContainer.appendChild(container); // Append the container to the group container
+        formCanvas.appendChild(container);
     }
 }
 
 function addDropdown(groupName) {
     const groupContainer = document.createElement('div');
-    groupContainer.classList.add('group-container'); // Create a container for the group
+    groupContainer.classList.add('group-container');
 
     // Create a header for the group
     const groupHeader = document.createElement('h3');
@@ -186,6 +117,122 @@ function addDropdown(groupName) {
     formCanvas.appendChild(groupContainer);
 }
 
+function addMultipleElements(type, groupName) {
+    const groupContainer = document.createElement('div');
+    groupContainer.classList.add('group-container');
+
+    const groupHeader = document.createElement('h3');
+    groupHeader.textContent = groupName;
+
+    // Create a button container for edit and delete buttons for the group
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+
+    // Edit Button for Group
+    const editGroupButton = document.createElement('button');
+    editGroupButton.textContent = '✏️'; // Edit icon
+    editGroupButton.classList.add('icon-button', 'edit'); // Add specific class for edit
+
+    editGroupButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the label click event
+        const newGroupName = prompt("Edit group name:", groupHeader.textContent);
+        if (newGroupName !== null) {
+            groupHeader.textContent = newGroupName; // Update group header
+            updateOptionLabels(groupContainer, newGroupName); // Update option labels to match the new group name
+        }
+    });
+
+    // Delete Button for Group
+    const deleteGroupButton = document.createElement('button');
+    deleteGroupButton.textContent = '🗑️'; // Delete icon
+    deleteGroupButton.classList.add('icon-button', 'delete'); // Add specific class for delete
+
+    deleteGroupButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent the label click event
+        groupContainer.remove(); // Remove the entire group container
+    });
+
+    // Append buttons to the button container
+    buttonContainer.appendChild(editGroupButton);
+    buttonContainer.appendChild(deleteGroupButton);
+
+    // Append group header and button container to the group container
+    groupContainer.appendChild(groupHeader);
+    groupContainer.appendChild(buttonContainer);
+
+    let count = parseInt(prompt("How many elements do you want to add?", "1"), 10);
+    if (isNaN(count) || count < 1) return;
+
+    for (let i = 0; i < count; i++) {
+        const container = document.createElement('div');
+        container.classList.add('form-element-container');
+
+        const optionName = prompt(`Enter name for option ${i + 1}:`, `${groupName} ${i + 1}`);
+
+        const label = document.createElement('label');
+        label.textContent = optionName || `${groupName} ${i + 1}`; // Use the custom name or the default
+
+        const element = document.createElement('input');
+        element.type = type;
+        element.classList.add(type === 'checkbox' ? 'checkbox-element' : 'radio-element');
+        element.name = groupName;
+        element.value = optionName; // Set the value to the optionName
+
+        container.appendChild(label);
+        container.appendChild(element);
+        groupContainer.appendChild(container);
+        addEditAndDeleteButtons(container, label, element);
+    }
+
+    formCanvas.appendChild(groupContainer);
+}
+function addOptionElement(groupContainer, type, groupName, optionNumber) {
+    const container = document.createElement('div');
+    container.classList.add('form-element-container');
+
+    // Input for Option Name (with label and event listener)
+    const optionNameInput = document.createElement('input');
+    optionNameInput.type = 'text';
+    optionNameInput.placeholder = `Enter name for option ${optionNumber}`;
+
+    const label = document.createElement('label');
+    label.textContent = optionNameInput.value || `${groupName} ${optionNumber}`; // Default or user-entered name
+
+    optionNameInput.addEventListener('input', () => {
+        label.textContent = optionNameInput.value || `${groupName} ${optionNumber}`; // Update label on name change
+        element.value = optionNameInput.value; // Update value for submission
+    });
+
+    const element = document.createElement('input');
+    element.type = type;
+    element.classList.add(type === 'checkbox' ? 'checkbox-element' : 'radio-element');
+    element.name = groupName;
+    element.value = optionNameInput.value || label.textContent; // Set initial value
+
+    container.appendChild(optionNameInput);
+    container.appendChild(label);
+    container.appendChild(element);
+    groupContainer.appendChild(container);
+    addEditAndDeleteButtons(container, label, element);
+}
+
+// Helper function to update option labels
+function updateOptionLabels(groupContainer, newGroupName) {
+    const labels = groupContainer.querySelectorAll('.form-element-container label');
+    labels.forEach((label, index) => {
+        // Instead of taking value from input, just update with the new group name
+        label.textContent = `${newGroupName} ${index + 1}`;
+    });
+
+    // Update the name and value of the radio/checkbox inputs
+    const elements = groupContainer.querySelectorAll('.form-element');
+    elements.forEach((element, index) => {
+        element.name = newGroupName;
+        element.value = `${newGroupName} ${index + 1}`;
+    });
+}
+
+
 function addElementToForm(type) {
     let element;
     switch (type) {
@@ -251,8 +298,18 @@ function addElementToForm(type) {
             element = document.createElement('input');
             element.type = 'range';
             break;
+        case 'time':
+            element = document.createElement('input');
+            element.type = 'time';
+            break;
+        case 'range':
+            element = document.createElement('input');
+            element.type = 'range';
+            element.min = 0;
+            element.max = 100;
+            break;
         default:
-            return;
+            return; 
     }
 
     element.classList.add('form-element');
@@ -260,39 +317,85 @@ function addElementToForm(type) {
 }
 
 // Function to add edit and delete buttons for labels
+// Function to add edit and delete buttons (refined)
 function addEditAndDeleteButtons(container, label, element) {
     // Create a button container
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');
 
-    // Edit Button
-    const editButton = document.createElement('button');
-    editButton.textContent = '✏️'; // You can replace this with an actual icon if desired
-    editButton.classList.add('icon-button', 'edit'); // Add specific class for edit
+   const editButton = document.createElement('button');
+    editButton.classList.add('icon-button',   
+ 'edit');
+    editButton.innerHTML = `
+      <svg viewBox="0 0 24 24" class="icon-svg">
+        <path d="M14.06 9l.94.94-2.93 2.93 2.93 2.93-.94.94L12.12 12l2.93-2.93zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19z" /> 
+      </svg>
+    `;
 
-    editButton.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent the label click event
-        const newLabel = prompt("Edit label:", label.textContent);
-        if (newLabel !== null) {
-            label.textContent = newLabel; // Update label
-            label.setAttribute('for', element.id); // Reassociate label with element
-        }
-    });
+    // Check if we have a valid label to edit. Some elements might not have associated labels (e.g., groups)
+    if (label) {
+        editButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the event from bubbling up
 
-    // Delete Button
+            const newLabel = prompt("Edit label:", label.textContent);
+            if (newLabel !== null) {
+                label.textContent = newLabel;
+                if (element.id) {
+                    label.setAttribute('for', element.id);
+                }
+            }
+            if (element.tagName === 'SELECT') {
+                // Dropdown (select)
+                editDropdownOptions(element);
+            } else if (element.type === 'checkbox' || element.type === 'radio') {
+                // Checkbox or Radio Button
+                editGroupedOption(element);
+            } else {
+                // Other elements (text, email, etc.)
+                const newLabel = prompt("Edit label:", label.textContent);
+                if (newLabel !== null) {
+                    label.textContent = newLabel;
+                    if (element.id) {
+                        label.setAttribute('for', element.id);
+                    }
+                }
+            }
+        });
+    }
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = '🗑️'; // You can replace this with an actual icon if desired
-    deleteButton.classList.add('icon-button', 'delete'); // Add specific class for delete
+    deleteButton.classList.add('icon-button', 'delete');
+    deleteButton.innerHTML = `
+    <svg viewBox="0 0 24 24" class="icon-svg">
+      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+    </svg>
+  `;
 
+    // Refined Delete Button Functionality
     deleteButton.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent the label click event
-        container.remove(); // Remove the entire container
-    });
-
-    // Append buttons to the button container
-    buttonContainer.appendChild(editButton);
-    buttonContainer.appendChild(deleteButton);
-    container.appendChild(buttonContainer); // Append button container to the main container
+        event.stopPropagation(); // Prevent event from bubbling up
+        if (!confirm("Are you sure you want to delete this element?")) {
+            return; // Don't delete if the user cancels
+        }
+ // Handle grouped elements
+    if (element.classList.contains('radio-element') || element.classList.contains('checkbox-element')) {
+      const groupContainer = container.closest('.group-container');
+      container.remove(); // Remove the single option container
+      if (groupContainer && groupContainer.children.length === 2) { 
+        // Only header and button container left
+        groupContainer.remove(); // Remove the whole group
+      }
+    } else {
+      container.remove(); // Remove the entire element container
+    }
+  });
+    // Append buttons only if they are valid
+    if (editButton && deleteButton) {
+        buttonContainer.appendChild(editButton);
+        buttonContainer.appendChild(deleteButton);
+        container.appendChild(buttonContainer);
+    } else {
+        console.error("Could not create edit or delete buttons.");
+    }
 }
 
 // Fetch existing forms from the API
@@ -310,6 +413,10 @@ async function fetchForms() {
 
 // Save the form to the API
 async function saveForm(formData) {
+    const title = prompt("Enter form title:", "Untitled Form");
+    const description = prompt("Enter form description:", "");
+    formData.title = title;
+    formData.description = description;
     const response = await fetch('/api/form', {
         method: 'POST',
         headers: {
@@ -321,24 +428,47 @@ async function saveForm(formData) {
         const savedForm = await response.json();
         console.log('Form saved:', savedForm);
     } else {
-        console.error('Failed to save form:', response.status);
+        const error = await response.json();
+        console.error('Failed to save form:', error);
     }
 }
 
-// Handle save button click
+// Handle save button click (updated)
 document.getElementById('saveButton').addEventListener('click', () => {
-    const formElements = Array.from(formCanvas.children).filter(child => child.tagName === 'DIV').map(container => {
-        const label = container.querySelector('label');
-        const element = container.querySelector('.form-element');
-        return {
-            type: element.tagName.toLowerCase(),
-            label: label.textContent,
-            placeholder: element.placeholder || '',
-            checked: element.checked || false,
-            name: element.name || '' // Capture name for radio buttons
-        };
+    const formElements = [];
+
+    formCanvas.querySelectorAll('.form-element-container, .group-container').forEach(container => {
+        const elements = container.querySelectorAll('.form-element');
+
+        elements.forEach(element => {
+            let labelText = "Untitled Element";
+            if (container.classList.contains('group-container')) {
+                const groupName = container.querySelector('h3').textContent;
+                labelText = `${groupName} ${element.parentElement.querySelector('label')?.textContent || ''}`;
+            } else if (container.querySelector('label')) {
+                labelText = container.querySelector('label').textContent;
+            }
+
+            formElements.push({
+                type: element.tagName.toLowerCase(),
+                label: labelText,
+                name: element.name || '',
+                placeholder: element.placeholder || '',
+                options: element.tagName.toLowerCase() === 'select' ? Array.from(element.options).map(option => option.text) : [], // Get dropdown options if applicable
+                checked: element.checked || false,
+                value: element.value || '',
+                validationRule: ''
+            });
+        });
     });
-    saveForm({ elements: formElements });
+
+    const formData = {
+        title: "Your Form Title",
+        description: "Your Form Description",
+        elements: formElements
+    };
+
+    saveForm(formData);
 });
 
 // Handle submit button click
@@ -373,7 +503,7 @@ async function submitForm() {
     if (response.ok) {
         console.log('Form submitted successfully');
     } else {
-        console.error('Failed to submit form:', response.status);
+        console.error('Failed to submit form:', response.status);	
     }
 }
 

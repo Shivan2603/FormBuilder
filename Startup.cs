@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using FormBuilderApp.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-
+using System.Text.Json.Serialization;
 public class Startup
 {
     private readonly IConfiguration _configuration;
@@ -44,22 +46,18 @@ public class Startup
 
         app.UseAuthorization();
 
-        // Enable middleware to serve generated Swagger as a JSON endpoint.
         app.UseSwagger();
 
-        // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-        // specifying the Swagger JSON endpoint.
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            c.RoutePrefix = "swagger"; // Set this to "swagger" or "" for root
+            c.RoutePrefix = "swagger"; 
         });
 
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
-            endpoints.MapFallbackToFile("index.html"); // Serve index.html for all unmatched routes
-
+            endpoints.MapFallbackToFile("index.html");
         });
     }
 }
