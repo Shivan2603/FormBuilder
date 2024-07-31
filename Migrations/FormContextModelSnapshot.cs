@@ -23,87 +23,81 @@ namespace FormBuilder.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("FormBuilderApp.Models.FormElement", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Label")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Label")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Options")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Options")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Placeholder")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Placeholder")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SubmittedFormId")
-                        .HasColumnType("int");
+                b.Property<int?>("SubmittedFormId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Type")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("SubmittedFormId");
+                b.HasIndex("SubmittedFormId");
 
-                    b.ToTable("FormElement");
-                });
+                b.ToTable("FormElement");
+            });
 
             modelBuilder.Entity("FormBuilderApp.Models.SubmittedForm", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-<<<<<<< HEAD
-                    b.Property<string>("FormData")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("FormData")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-=======
->>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
-                    b.Property<DateTime>("SubmissionDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("getdate()");
+                b.Property<DateTime>("SubmissionDate")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("datetime2")
+                    .HasDefaultValueSql("getdate()");
 
-<<<<<<< HEAD
-=======
-                    b.Property<string>("SubmittedData")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("SubmittedData")
+                    .HasColumnType("nvarchar(max)");
 
->>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Title")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("SubmittedForms");
-                });
+                b.ToTable("SubmittedForms");
+            });
 
             modelBuilder.Entity("FormBuilderApp.Models.FormElement", b =>
-                {
-                    b.HasOne("FormBuilderApp.Models.SubmittedForm", null)
-                        .WithMany("Elements")
-                        .HasForeignKey("SubmittedFormId");
-                });
+            {
+                b.HasOne("FormBuilderApp.Models.SubmittedForm", null)
+                    .WithMany("Elements")
+                    .HasForeignKey("SubmittedFormId");
+            });
 
             modelBuilder.Entity("FormBuilderApp.Models.SubmittedForm", b =>
-                {
-                    b.Navigation("Elements");
-                });
+            {
+                b.Navigation("Elements");
+            });
 #pragma warning restore 612, 618
         }
     }

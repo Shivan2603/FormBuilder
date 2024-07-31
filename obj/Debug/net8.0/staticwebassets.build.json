@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "Hash": "QeOHrsmpgE2wMjR5hwluODk2Vu9CKXloQrGl+5ip92s=",
-=======
-  "Hash": "f9lZGehlUUwWBSkvW8Besp+7yL/0DXxfafKjO8orfPc=",
->>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
   "Source": "FormBuilder",
   "BasePath": "_content/FormBuilder",
   "Mode": "Default",
@@ -78,7 +74,6 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-<<<<<<< HEAD
       "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.css",
       "SourceId": "FormBuilder",
       "SourceType": "Discovered",
@@ -98,8 +93,6 @@
       "OriginalItemSpec": "wwwroot\\savedForms.css"
     },
     {
-=======
->>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
       "Identity": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
       "SourceId": "FormBuilder",
       "SourceType": "Discovered",

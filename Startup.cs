@@ -20,7 +20,7 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDbContext<FormContext>(options =>
-            options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+        options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
         services.AddControllers();
         services.AddSwaggerGen(c =>
@@ -57,7 +57,7 @@ public class Startup
 
             await next(); // If not index.html, pass to next middleware
         });
-        
+
         app.UseHttpsRedirection();
 
         app.UseRouting();
@@ -69,7 +69,7 @@ public class Startup
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            c.RoutePrefix = "swagger"; 
+            c.RoutePrefix = "swagger";
         });
 
         app.UseEndpoints(endpoints =>
