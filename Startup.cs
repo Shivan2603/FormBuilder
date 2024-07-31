@@ -58,8 +58,7 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
-            endpoints.MapFallbackToFile("index.html"); // Serve index.html for all unmatched routes
-
+            endpoints.MapFallbackToFile("index.html"); // Serve index.html for SPA
         });
     }
 }
