@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using FormBuilderApp.Data;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-
+using System.Text.Json.Serialization;
 public class Startup
 {
     private readonly IConfiguration _configuration;
@@ -37,28 +39,43 @@ public class Startup
             app.UseExceptionHandler("/Home/Error");
             app.UseHsts();
         }
-        app.UseStaticFiles();
+
+        app.UseStaticFiles(); // Serve other static files from wwwroot first
+
+        app.Use(async (context, next) =>
+        {
+            if (context.Request.Path == "/index.html") // Check if it's index.html
+            {
+                var fileProvider = new PhysicalFileProvider(@"C:\ProjectFolder\FormBuilder");
+                var fileInfo = fileProvider.GetFileInfo("index.html");
+                if (fileInfo.Exists)
+                {
+                    await context.Response.SendFileAsync(fileInfo.PhysicalPath);
+                    return;
+                }
+            }
+
+            await next(); // If not index.html, pass to next middleware
+        });
+        
         app.UseHttpsRedirection();
 
         app.UseRouting();
 
         app.UseAuthorization();
 
-        // Enable middleware to serve generated Swagger as a JSON endpoint.
         app.UseSwagger();
 
-        // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-        // specifying the Swagger JSON endpoint.
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            c.RoutePrefix = "swagger"; // Set this to "swagger" or "" for root
+            c.RoutePrefix = "swagger"; 
         });
 
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
-            endpoints.MapFallbackToFile("index.html"); // Serve index.html for SPA
+            endpoints.MapFallbackToFile("index.html");
         });
     }
 }

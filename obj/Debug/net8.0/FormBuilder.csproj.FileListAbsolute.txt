@@ -122,6 +122,7 @@ C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\FormBuilder.AssemblyInfo.cs
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\FormBuilder.csproj.CoreCompileInputs.cache
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\FormBuilder.MvcApplicationPartsAssemblyInfo.cs
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\FormBuilder.MvcApplicationPartsAssemblyInfo.cache
+C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\FormBuilder.sourcelink.json
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\staticwebassets.build.json
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\staticwebassets.development.json
 C:\ProjectFolder\FormBuilder\obj\Debug\net8.0\staticwebassets\msbuild.FormBuilder.Microsoft.AspNetCore.StaticWebAssets.props

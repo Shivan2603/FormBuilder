@@ -5,8 +5,20 @@
       "PackagePath": "staticwebassets\\formBuilder.html"
     },
     {
+      "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formView.html",
+      "PackagePath": "staticwebassets\\formView.html"
+    },
+    {
       "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.css",
+      "PackagePath": "staticwebassets\\savedForms.css"
+    },
+    {
+      "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
+      "PackagePath": "staticwebassets\\savedForms.html"
     },
     {
       "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\script.js",
