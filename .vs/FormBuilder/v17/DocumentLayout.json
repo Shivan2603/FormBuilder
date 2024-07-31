@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\ProjectFolder\\FormBuilder\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -11,10 +12,13 @@
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\formview.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+=======
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\savedforms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\savedforms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -25,18 +29,35 @@
     {
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\formbuilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\formbuilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\savedforms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\savedforms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\formview.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\formview.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\wwwroot\\formbuilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:wwwroot\\formbuilder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     },
     {
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\models\\submittedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,6 +95,33 @@
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+<<<<<<< HEAD
+=======
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\models\\submittedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:models\\submittedform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\data\\formcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:data\\formcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\controllers\\formcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:controllers\\formcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -101,8 +149,13 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\FormModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\migrations\\20240729161419_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:migrations\\20240729161419_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|c:\\projectfolder\\formbuilder\\migrations\\20240728223440_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E283C375-08C3-41E4-9343-F64BD4B8F8BA}|FormBuilder.csproj|solutionrelative:migrations\\20240728223440_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     }
   ],
   "DocumentGroupContainers": [
@@ -124,6 +177,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 7,
               "Title": "Startup.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Startup.cs",
@@ -202,12 +256,15 @@
             },
             {
               "$type": "Document",
+=======
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Program.cs",
               "RelativeToolTip": "Program.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T17:03:24.022Z",
@@ -329,6 +386,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 17,
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T17:03:24.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAiwD0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T16:22:42.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Properties\\launchsettings.json",
               "RelativeDocumentMoniker": "Properties\\launchsettings.json",
@@ -340,6 +418,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 16,
               "Title": "20240729154623_Init.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240729154623_Init.cs",
@@ -365,6 +444,130 @@
             {
               "$type": "Document",
               "DocumentIndex": 18,
+=======
+              "DocumentIndex": 5,
+              "Title": "formBuilder.html",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formBuilder.html",
+              "RelativeDocumentMoniker": "wwwroot\\formBuilder.html",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formBuilder.html",
+              "RelativeToolTip": "wwwroot\\formBuilder.html",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAYwB0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-26T07:07:17.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "formView.html",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formView.html",
+              "RelativeDocumentMoniker": "wwwroot\\formView.html",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\formView.html",
+              "RelativeToolTip": "wwwroot\\formView.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-28T13:53:00.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "wwwroot\\index.html",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\index.html",
+              "RelativeToolTip": "wwwroot\\index.html",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-28T13:52:41.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "savedForms.html",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
+              "RelativeDocumentMoniker": "wwwroot\\savedForms.html",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
+              "RelativeToolTip": "wwwroot\\savedForms.html",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwCkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-07-28T13:53:11.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "script.js",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\script.js",
+              "RelativeDocumentMoniker": "wwwroot\\script.js",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\script.js",
+              "RelativeToolTip": "wwwroot\\script.js",
+              "ViewState": "AQIAAOcBAAAAAAAAAAAcwPsBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-26T07:07:49.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\styles.css",
+              "RelativeDocumentMoniker": "wwwroot\\styles.css",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\styles.css",
+              "RelativeToolTip": "wwwroot\\styles.css",
+              "ViewState": "AQIAAPoAAAAAAAAAAAAYwAsBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-26T08:20:51.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-24T16:20:55.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SubmittedForm.cs",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Models\\SubmittedForm.cs",
+              "RelativeDocumentMoniker": "Models\\SubmittedForm.cs",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Models\\SubmittedForm.cs",
+              "RelativeToolTip": "Models\\SubmittedForm.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA5wBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T07:12:01.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormContext.cs",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Data\\FormContext.cs",
+              "RelativeDocumentMoniker": "Data\\FormContext.cs",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Data\\FormContext.cs",
+              "RelativeToolTip": "Data\\FormContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T16:48:18.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormController.cs",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Controllers\\FormController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FormController.cs",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Controllers\\FormController.cs",
+              "RelativeToolTip": "Controllers\\FormController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAcwEUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T16:19:51.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -376,40 +579,80 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 19,
+=======
+              "DocumentIndex": 20,
+              "Title": "20240728223440_Initial.cs",
+              "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728223440_Initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240728223440_Initial.cs",
+              "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728223440_Initial.cs",
+              "RelativeToolTip": "Migrations\\20240728223440_Initial.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBYAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T22:34:40.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "20240728212157_Initial.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728212157_Initial.cs",
               "RelativeDocumentMoniker": "Migrations\\20240728212157_Initial.cs",
               "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728212157_Initial.cs",
               "RelativeToolTip": "Migrations\\20240728212157_Initial.cs",
+<<<<<<< HEAD
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T21:21:58.041Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 20,
+=======
+              "DocumentIndex": 15,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "20240728204900_Initial.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728204900_Initial.cs",
               "RelativeDocumentMoniker": "Migrations\\20240728204900_Initial.cs",
               "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728204900_Initial.cs",
               "RelativeToolTip": "Migrations\\20240728204900_Initial.cs",
+<<<<<<< HEAD
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T20:49:00.302Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 21,
+=======
+              "DocumentIndex": 16,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "20240728184524_Initial.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728184524_Initial.cs",
               "RelativeDocumentMoniker": "Migrations\\20240728184524_Initial.cs",
               "ToolTip": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728184524_Initial.cs",
               "RelativeToolTip": "Migrations\\20240728184524_Initial.cs",
+<<<<<<< HEAD
+=======
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-28T18:45:24.673Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 24,
+=======
+              "DocumentIndex": 19,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "FormModel.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Models\\FormModel.cs",
               "RelativeDocumentMoniker": "Models\\FormModel.cs",
@@ -420,7 +663,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 23,
+=======
+              "DocumentIndex": 18,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "Formelement.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Models\\Formelement.cs",
               "RelativeDocumentMoniker": "Models\\Formelement.cs",
@@ -431,7 +678,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 22,
+=======
+              "DocumentIndex": 17,
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
               "Title": "20240728070839_UpdateFormElementWithPrimaryKey.cs",
               "DocumentMoniker": "C:\\ProjectFolder\\FormBuilder\\Migrations\\20240728070839_UpdateFormElementWithPrimaryKey.cs",
               "RelativeDocumentMoniker": "Migrations\\20240728070839_UpdateFormElementWithPrimaryKey.cs",

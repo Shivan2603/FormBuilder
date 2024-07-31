@@ -48,6 +48,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\index.html))</OriginalItemSpec>
     </StaticWebAsset>
+<<<<<<< HEAD
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\savedForms.css))">
       <SourceType>Package</SourceType>
       <SourceId>FormBuilder</SourceId>
@@ -64,6 +65,8 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\savedForms.css))</OriginalItemSpec>
     </StaticWebAsset>
+=======
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\savedForms.html))">
       <SourceType>Package</SourceType>
       <SourceId>FormBuilder</SourceId>

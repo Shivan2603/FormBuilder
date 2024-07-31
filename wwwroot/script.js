@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿document.addEventListener('DOMContentLoaded', () => {
     initializeDraggableElements(); // Initialize draggable elements outside of the initializeFormEvents function
     initializeFormEvents(); // Initialize form events
@@ -79,6 +80,9 @@ function initializeFormEvents() {
 }
 
 document.querySelectorAll('.draggable').forEach(item => {
+=======
+﻿document.querySelectorAll('.draggable').forEach(item => {
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     item.addEventListener('dragstart', dragStart);
 });
 
@@ -94,7 +98,11 @@ function dragStart(e) {
 
 
 function dragOver(e) {
+<<<<<<< HEAD
     e.preventDefault();
+=======
+    e.preventDefault(); 
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
 }
 
 function drop(e) {
@@ -103,11 +111,19 @@ function drop(e) {
 
     if (type === 'checkbox' || type === 'radio') {
         const groupName = prompt("Enter group name for checkboxes/radio buttons:", "Group Name");
+<<<<<<< HEAD
         if (!groupName) return;
         addMultipleElements(type, groupName);
     } else if (type === 'select') {
         const groupName = prompt("Enter group name for the dropdown:", "Dropdown Name");
         if (!groupName) return;
+=======
+        if (!groupName) return; 
+        addMultipleElements(type, groupName);
+    } else if (type === 'select') {
+        const groupName = prompt("Enter group name for the dropdown:", "Dropdown Name");
+        if (!groupName) return; 
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
         addDropdown(groupName);
     } else {
         const labelText = prompt("Enter label for the element:", "Label");
@@ -126,6 +142,7 @@ function drop(e) {
         addEditAndDeleteButtons(container, label, element);
 
         formCanvas.appendChild(container);
+<<<<<<< HEAD
     }
 }
 // Function to load form data into the form builder (used in formEdit.html)
@@ -217,6 +234,8 @@ function renderFormElement(elementData) {
         default:
             console.error(`Unsupported element type: ${type}`);
             return null;
+=======
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     }
 
     element.disabled = true; // Disable the element for viewing only
@@ -487,7 +506,7 @@ function addElementToForm(type) {
             element.max = 100;
             break;
         default:
-            return;
+            return; 
     }
 
     element.classList.add('form-element');
@@ -501,9 +520,15 @@ function addEditAndDeleteButtons(container, label, element) {
     const buttonContainer = document.createElement('div');
     buttonContainer.classList.add('button-container');
 
+<<<<<<< HEAD
     const editButton = document.createElement('button');
     editButton.classList.add('icon-button',
         'edit');
+=======
+   const editButton = document.createElement('button');
+    editButton.classList.add('icon-button',   
+ 'edit');
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     editButton.innerHTML = `
       <svg viewBox="0 0 24 24" class="icon-svg">
         <path d="M14.06 9l.94.94-2.93 2.93 2.93 2.93-.94.94L12.12 12l2.93-2.93zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM5.92 19H5v-.92l9.06-9.06.92.92L5.92 19z" /> 
@@ -554,6 +579,7 @@ function addEditAndDeleteButtons(container, label, element) {
         if (!confirm("Are you sure you want to delete this element?")) {
             return; // Don't delete if the user cancels
         }
+<<<<<<< HEAD
         // Handle grouped elements
         if (element.classList.contains('radio-element') || element.classList.contains('checkbox-element')) {
             const groupContainer = container.closest('.group-container');
@@ -566,6 +592,20 @@ function addEditAndDeleteButtons(container, label, element) {
             container.remove(); // Remove the entire element container
         }
     });
+=======
+ // Handle grouped elements
+    if (element.classList.contains('radio-element') || element.classList.contains('checkbox-element')) {
+      const groupContainer = container.closest('.group-container');
+      container.remove(); // Remove the single option container
+      if (groupContainer && groupContainer.children.length === 2) { 
+        // Only header and button container left
+        groupContainer.remove(); // Remove the whole group
+      }
+    } else {
+      container.remove(); // Remove the entire element container
+    }
+  });
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     // Append buttons only if they are valid
     if (editButton && deleteButton) {
         buttonContainer.appendChild(editButton);
@@ -590,6 +630,7 @@ async function fetchForms() {
 }
 
 // Save the form to the API
+<<<<<<< HEAD
 
 // Modify the saveForm function to handle both POST (new form) and PUT (update form)
 async function saveForm(formData, formId = null) {
@@ -631,6 +672,31 @@ async function saveForm(formData, formId = null) {
 
 // Handle save button click (updated)
 document.getElementById('saveButton').addEventListener('click', async () => {
+=======
+async function saveForm(formData) {
+    const title = prompt("Enter form title:", "Untitled Form");
+    const description = prompt("Enter form description:", "");
+    formData.title = title;
+    formData.description = description;
+    const response = await fetch('/api/form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    });
+    if (response.ok) {
+        const savedForm = await response.json();
+        console.log('Form saved:', savedForm);
+    } else {
+        const error = await response.json();
+        console.error('Failed to save form:', error);
+    }
+}
+
+// Handle save button click (updated)
+document.getElementById('saveButton').addEventListener('click', () => {
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     const formElements = [];
 
     formCanvas.querySelectorAll('.form-element-container, .group-container').forEach(container => {
@@ -661,10 +727,16 @@ document.getElementById('saveButton').addEventListener('click', async () => {
     const formData = {
         title: "Your Form Title",
         description: "Your Form Description",
+<<<<<<< HEAD
         formData: JSON.stringify(formElements) // Stringify the elements array
     };
     const urlParams = new URLSearchParams(window.location.search);
     const formId = urlParams.get('id');
+=======
+        elements: formElements
+    };
+
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
     saveForm(formData);
 });
 
@@ -700,7 +772,7 @@ async function submitForm() {
     if (response.ok) {
         console.log('Form submitted successfully');
     } else {
-        console.error('Failed to submit form:', response.status);
+        console.error('Failed to submit form:', response.status);	
     }
 }
 

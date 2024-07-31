@@ -13,10 +13,13 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.css",
       "PackagePath": "staticwebassets\\savedForms.css"
     },
     {
+=======
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
       "Id": "C:\\ProjectFolder\\FormBuilder\\wwwroot\\savedForms.html",
       "PackagePath": "staticwebassets\\savedForms.html"
     },

@@ -4,8 +4,12 @@ using FormBuilderApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using System.Text.Json.Serialization;
 using System.Text.Json;
+=======
+using System.Text.Json.Serialization;   
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
 
 
 namespace FormBuilderApp.Controllers
@@ -28,10 +32,12 @@ namespace FormBuilderApp.Controllers
             return await _context.SubmittedForms.ToListAsync();
         }
 
+        // GET: api/form/{id} (Get a specific form)
         [HttpGet("{id}")]
         public async Task<ActionResult<SubmittedForm>> GetForm(int id)
         {
             var submittedForm = await _context.SubmittedForms.FindAsync(id);
+<<<<<<< HEAD
 
             if (submittedForm == null)
                 return NotFound();
@@ -63,6 +69,30 @@ namespace FormBuilderApp.Controllers
         {
             if (id != submittedForm.Id)
             {
+=======
+            if (submittedForm == null)
+            {
+                return NotFound();
+            }
+            return submittedForm;
+        }
+
+        // POST: api/form (Save a new form)
+        [HttpPost]
+        public async Task<ActionResult<SubmittedForm>> PostForm(SubmittedForm submittedForm)
+        {
+            _context.SubmittedForms.Add(submittedForm);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetForm), new { id = submittedForm.Id }, submittedForm);
+        }
+     
+        // PUT: api/form/{id} (Update an existing form)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutForm(int id, SubmittedForm submittedForm)
+        {
+            if (id != submittedForm.Id)
+            {
+>>>>>>> 34604b3fb1b44440c4f15b94ba0ee5e9b4d8f434
                 return BadRequest();
             }
             _context.Entry(submittedForm).State = EntityState.Modified;
